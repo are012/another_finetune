@@ -22,8 +22,8 @@ def fetch_naver_news(company_name: str, display_count: int = 5) -> List[Dict[str
         list[dict]: 뉴스 기사 딕셔너리 리스트 (각 딕셔너리는 'title', 'description' 키를 포함).
     """
     # 1. 네이버 개발자 센터에서 발급받은 Client ID와 Client Secret
-    NAVER_CLIENT_ID = "4MgebXsDeGQG53kQOOtS" # ◀◀◀ 본인의 Client ID로 교체
-    NAVER_CLIENT_SECRET = "T4BhIpszD0" # ◀◀◀ 본인의 Client Secret으로 교체
+    NAVER_CLIENT_ID = "" # ◀◀◀ 본인의 Client ID로 교체
+    NAVER_CLIENT_SECRET = "" # ◀◀◀ 본인의 Client Secret으로 교체
     
     # 네이버 뉴스 검색 API 엔드포인트
     URL = "https://openapi.naver.com/v1/search/news.json"
@@ -318,7 +318,7 @@ def fetch_dart_disclosures(corp_code, start_date=None, end_date=None, page_no=1,
     """
     
     # DART API 키 (무료 API 키 발급 필요: https://opendart.fss.or.kr/)
-    DART_API_KEY = "e3007850f6984350747ee39450792b7f0a9f115b"  # ◀◀◀ 실제 API 키로 교체 필요!
+    DART_API_KEY = ""  # ◀◀◀ 실제 API 키로 교체 필요!
     
     # 고유번호를 8자리 형식으로 보장
     corp_code = str(corp_code).zfill(8)
