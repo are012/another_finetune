@@ -1,0 +1,1136 @@
+[
+  {
+    "start_time": "2025-08-04T18:08:09.139360",
+    "companies_processed": [
+      {
+        "company": "삼성전자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK하이닉스",
+        "documents": 12,
+        "chunks": 12,
+        "success": true
+      },
+      {
+        "company": "NAVER",
+        "documents": 5,
+        "chunks": 5,
+        "success": true
+      },
+      {
+        "company": "카카오",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG에너지솔루션",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      }
+    ],
+    "total_documents": 48,
+    "total_chunks": 48,
+    "errors": [],
+    "end_time": "2025-08-04T18:08:17.712220",
+    "duration_minutes": 0.142881
+  },
+  {
+    "start_time": "2025-08-04T18:09:01.995564",
+    "companies_processed": [
+      {
+        "company": "삼성전자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK하이닉스",
+        "documents": 12,
+        "chunks": 12,
+        "success": true
+      },
+      {
+        "company": "NAVER",
+        "documents": 5,
+        "chunks": 5,
+        "success": true
+      },
+      {
+        "company": "카카오",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG에너지솔루션",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      }
+    ],
+    "total_documents": 48,
+    "total_chunks": 48,
+    "errors": [],
+    "end_time": "2025-08-04T18:09:06.748598",
+    "duration_minutes": 0.07921723333333335
+  },
+  {
+    "start_time": "2025-08-04T18:15:20.251991",
+    "companies_processed": [
+      {
+        "company": "삼성전자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK하이닉스",
+        "documents": 12,
+        "chunks": 12,
+        "success": true
+      },
+      {
+        "company": "NAVER",
+        "documents": 6,
+        "chunks": 6,
+        "success": true
+      },
+      {
+        "company": "카카오",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG에너지솔루션",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "삼성바이오로직스",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "현대자동차",
+        "documents": 13,
+        "chunks": 13,
+        "success": true
+      },
+      {
+        "company": "기아",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성SDI",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG화학",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      }
+    ],
+    "total_documents": 104,
+    "total_chunks": 104,
+    "errors": [],
+    "end_time": "2025-08-04T18:15:30.036538",
+    "duration_minutes": 0.16307578333333334
+  },
+  {
+    "start_time": "2025-08-04T18:15:51.689857",
+    "companies_processed": [
+      {
+        "company": "삼성전자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK하이닉스",
+        "documents": 12,
+        "chunks": 12,
+        "success": true
+      },
+      {
+        "company": "NAVER",
+        "documents": 6,
+        "chunks": 6,
+        "success": true
+      },
+      {
+        "company": "카카오",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG에너지솔루션",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "삼성바이오로직스",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "현대자동차",
+        "documents": 13,
+        "chunks": 13,
+        "success": true
+      },
+      {
+        "company": "기아",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성SDI",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG화학",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "POSCO홀딩스",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성물산",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "KB금융",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "신한지주",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "하나금융지주",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG전자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "현대모비스",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "셀트리온",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK이노베이션",
+        "documents": 18,
+        "chunks": 18,
+        "success": true
+      },
+      {
+        "company": "삼성생명보험",
+        "documents": 0,
+        "chunks": 0,
+        "success": true
+      },
+      {
+        "company": "한국전력공사",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK텔레콤",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "포스코퓨처엠",
+        "documents": 14,
+        "chunks": 14,
+        "success": true
+      },
+      {
+        "company": "현대중공업",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성화재",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG생활건강",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "KT&G",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "한화솔루션",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "고려아연",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성에스디에스",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      }
+    ],
+    "total_documents": 306,
+    "total_chunks": 306,
+    "errors": [],
+    "end_time": "2025-08-04T18:16:19.487595",
+    "duration_minutes": 0.4632956333333333
+  },
+  {
+    "start_time": "2025-08-04T18:23:09.915391",
+    "companies_processed": [
+      {
+        "company": "삼성전자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK하이닉스",
+        "documents": 12,
+        "chunks": 12,
+        "success": true
+      },
+      {
+        "company": "NAVER",
+        "documents": 6,
+        "chunks": 6,
+        "success": true
+      },
+      {
+        "company": "카카오",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG에너지솔루션",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "삼성바이오로직스",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "현대자동차",
+        "documents": 13,
+        "chunks": 13,
+        "success": true
+      },
+      {
+        "company": "기아",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성SDI",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG화학",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "POSCO홀딩스",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성물산",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "KB금융",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "신한지주",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "하나금융지주",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG전자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "현대모비스",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "셀트리온",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK이노베이션",
+        "documents": 18,
+        "chunks": 18,
+        "success": true
+      },
+      {
+        "company": "삼성생명보험",
+        "documents": 0,
+        "chunks": 0,
+        "success": true
+      },
+      {
+        "company": "한국전력공사",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK텔레콤",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "포스코퓨처엠",
+        "documents": 14,
+        "chunks": 14,
+        "success": true
+      },
+      {
+        "company": "현대중공업",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성화재",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG생활건강",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "KT&G",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "한화솔루션",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "고려아연",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성에스디에스",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      }
+    ],
+    "total_documents": 306,
+    "total_chunks": 306,
+    "errors": [],
+    "end_time": "2025-08-04T18:23:37.814031",
+    "duration_minutes": 0.46497733333333335
+  },
+  {
+    "start_time": "2025-08-04T18:27:12.067871",
+    "companies_processed": [
+      {
+        "company": "삼성전자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK하이닉스",
+        "documents": 12,
+        "chunks": 12,
+        "success": true
+      },
+      {
+        "company": "NAVER",
+        "documents": 6,
+        "chunks": 6,
+        "success": true
+      },
+      {
+        "company": "카카오",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG에너지솔루션",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "삼성바이오로직스",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "현대자동차",
+        "documents": 13,
+        "chunks": 13,
+        "success": true
+      },
+      {
+        "company": "기아",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성SDI",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG화학",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "POSCO홀딩스",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성물산",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "KB금융",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "신한지주",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "하나금융지주",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG전자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "현대모비스",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "셀트리온",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK이노베이션",
+        "documents": 18,
+        "chunks": 18,
+        "success": true
+      },
+      {
+        "company": "삼성생명보험",
+        "documents": 0,
+        "chunks": 0,
+        "success": true
+      },
+      {
+        "company": "한국전력공사",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK텔레콤",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "포스코퓨처엠",
+        "documents": 14,
+        "chunks": 14,
+        "success": true
+      },
+      {
+        "company": "현대중공업",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성화재",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG생활건강",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "KT&G",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "한화솔루션",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "고려아연",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성에스디에스",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "아모레퍼시픽",
+        "documents": 12,
+        "chunks": 12,
+        "success": true
+      },
+      {
+        "company": "SK",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "두산에너빌리티",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "HMM",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "한국조선해양",
+        "documents": 6,
+        "chunks": 6,
+        "success": true
+      },
+      {
+        "company": "기업은행",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "우리금융지주",
+        "documents": 8,
+        "chunks": 8,
+        "success": true
+      },
+      {
+        "company": "현대건설",
+        "documents": 14,
+        "chunks": 14,
+        "success": true
+      },
+      {
+        "company": "삼성전기",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG이노텍",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "KT",
+        "documents": 7,
+        "chunks": 7,
+        "success": true
+      },
+      {
+        "company": "한국가스공사",
+        "documents": 8,
+        "chunks": 8,
+        "success": true
+      },
+      {
+        "company": "롯데케미칼",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "현대글로비스",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "SK스퀘어",
+        "documents": 7,
+        "chunks": 7,
+        "success": true
+      },
+      {
+        "company": "한미반도체",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "삼성중공업",
+        "documents": 12,
+        "chunks": 12,
+        "success": true
+      },
+      {
+        "company": "포스코인터내셔널",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "두산",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "현대제철",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "LG",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "한화에어로스페이스",
+        "documents": 13,
+        "chunks": 13,
+        "success": true
+      },
+      {
+        "company": "KB국민은행",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "신한은행",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "하나은행",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "코웨이",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "크래프톤",
+        "documents": 13,
+        "chunks": 13,
+        "success": true
+      },
+      {
+        "company": "펄어비스",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "NCSoft",
+        "documents": 0,
+        "chunks": 0,
+        "success": true
+      },
+      {
+        "company": "넷마블",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "카카오뱅크",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "카카오페이",
+        "documents": 4,
+        "chunks": 4,
+        "success": true
+      },
+      {
+        "company": "컴투스",
+        "documents": 12,
+        "chunks": 12,
+        "success": true
+      },
+      {
+        "company": "위메이드",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "넥슨게임즈",
+        "documents": 2,
+        "chunks": 2,
+        "success": true
+      },
+      {
+        "company": "삼천리",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "GS",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "GS칼텍스",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "S-Oil",
+        "documents": 0,
+        "chunks": 0,
+        "success": true
+      },
+      {
+        "company": "현대오일뱅크",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "롯데쇼핑",
+        "documents": 8,
+        "chunks": 8,
+        "success": true
+      },
+      {
+        "company": "롯데칠성음료",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "신세계",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "이마트",
+        "documents": 14,
+        "chunks": 14,
+        "success": true
+      },
+      {
+        "company": "홈플러스",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "CJ제일제당",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "CJ ENM",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "CJ대한통운",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "동원시스템즈",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "오뚜기",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "농심",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "롯데제과",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "한화시스템",
+        "documents": 5,
+        "chunks": 5,
+        "success": true
+      },
+      {
+        "company": "한화생명",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "동화약품",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "유한양행",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "녹십자",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "셀트리온제약",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "대웅제약",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "종근당",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "포스코DX",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "SK머티리얼즈",
+        "documents": 4,
+        "chunks": 4,
+        "success": true
+      },
+      {
+        "company": "LG디스플레이",
+        "documents": 9,
+        "chunks": 9,
+        "success": true
+      },
+      {
+        "company": "삼성디스플레이",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "SK바이오팜",
+        "documents": 8,
+        "chunks": 8,
+        "success": true
+      },
+      {
+        "company": "한미약품",
+        "documents": 10,
+        "chunks": 10,
+        "success": true
+      },
+      {
+        "company": "일동제약",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      },
+      {
+        "company": "부광약품",
+        "documents": 15,
+        "chunks": 15,
+        "success": true
+      },
+      {
+        "company": "대한항공",
+        "documents": 11,
+        "chunks": 11,
+        "success": true
+      }
+    ],
+    "total_documents": 955,
+    "total_chunks": 955,
+    "errors": [],
+    "end_time": "2025-08-04T18:28:47.242776",
+    "duration_minutes": 1.5862484166666666
+  }
+]

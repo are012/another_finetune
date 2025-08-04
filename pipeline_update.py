@@ -21,7 +21,10 @@ import logging
 # LangChain 관련 임포트
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_community.vectorstores import Chroma
+try:
+    from langchain_chroma import Chroma
+except ImportError:
+    from langchain_community.vectorstores import Chroma
 from langchain.schema import Document
 
 # 우리의 데이터 수집 모듈
@@ -35,16 +38,25 @@ logger = logging.getLogger(__name__)
 class DataPipeline:
     """데이터 수집 및 벡터 DB 구축을 담당하는 메인 클래스"""
     
-    def __init__(self, google_api_key: str, db_dir: str = "rag_db"):
+    def __init__(self, google_api_key: str, db_dir: str = "rag_db", company_list_type: str = "top_10"):
         """
         초기화
         
         Args:
             google_api_key (str): Google AI API 키
             db_dir (str): 벡터 DB 저장 디렉토리
+            company_list_type (str): 기업 목록 유형
+                - "top_10": 상위 10개 기업 (기본값)
+                - "top_30": 상위 30개 기업
+                - "top_50": 상위 50개 기업  
+                - "top_100": 상위 100개 기업
+                - "tech_focus": 기술주 중심
+                - "finance_focus": 금융주 중심
+                - "custom_file": target_companies.json 파일에서 로드
         """
         self.google_api_key = google_api_key
         self.db_dir = db_dir
+        self.company_list_type = company_list_type
         
         # 임베딩 모델 초기화
         self.embeddings = GoogleGenerativeAIEmbeddings(
@@ -59,16 +71,34 @@ class DataPipeline:
             separators=["\n\n", "\n", ".", "!", "?", ";", ":", " ", ""]
         )
         
-        # 분석 대상 기업 목록 (쉽게 확장 가능)
-        self.target_companies = [
-            "삼성전자",
-            "SK하이닉스",
-            "NAVER",
-            "카카오",
-            "LG에너지솔루션"
-        ]
+        # 동적 기업 목록 로드
+        self.target_companies = self._load_target_companies()
         
         logger.info(f"데이터 파이프라인 초기화 완료. DB 디렉토리: {self.db_dir}")
+        logger.info(f"분석 대상 기업: {len(self.target_companies)}개 ({self.company_list_type})")
+    
+    def _load_target_companies(self) -> List[str]:
+        """분석 대상 기업 목록을 동적으로 로드"""
+        try:
+            if self.company_list_type == "custom_file":
+                # JSON 파일에서 로드
+                companies = dc.load_company_list_from_file("target_companies.json")
+                if not companies:
+                    logger.warning("JSON 파일 로드 실패, 기본 top_10 사용")
+                    companies = dc.get_custom_company_list("top_10")
+            else:
+                # 미리 정의된 목록에서 로드
+                companies = dc.get_custom_company_list(self.company_list_type)
+            
+            logger.info(f"✅ 기업 목록 로드 완료: {len(companies)}개")
+            return companies
+            
+        except Exception as e:
+            logger.error(f"❌ 기업 목록 로드 실패: {e}")
+            # 폴백: 기본 목록 사용
+            fallback_companies = ["삼성전자", "SK하이닉스", "NAVER", "카카오", "LG에너지솔루션"]
+            logger.info(f"폴백 목록 사용: {len(fallback_companies)}개")
+            return fallback_companies
     
     def collect_company_data(self, company_name: str) -> Dict[str, Any]:
         """
@@ -241,8 +271,8 @@ class DataPipeline:
                     persist_directory=self.db_dir
                 )
             
-            # 변경사항 저장
-            vectorstore.persist()
+            # 변경사항 저장 (Chroma 0.4.x부터 자동 저장됨)
+            # vectorstore.persist()  # deprecated
             logger.info(f"  💾 벡터 DB 저장 완료: {len(split_docs)}개 청크")
             
             return len(split_docs)
@@ -367,8 +397,24 @@ def main():
         return
     
     try:
+        # 🔧 기업 목록 설정 - 여기서 분석 규모 조정 가능
+        company_list_type = "top_100"  # 상위 100개 기업 (전체 코스피 규모)
+        
+        # 🚀 다른 규모로 분석하려면 아래 중 하나로 변경:
+        # company_list_type = "top_10"    # 상위 10개 기업 (빠른 테스트)
+        # company_list_type = "top_30"    # 상위 30개 기업 (중간 규모)
+        # company_list_type = "top_50"    # 상위 50개 기업 (대규모)
+        # company_list_type = "tech_focus"    # 기술주 중심 (삼성전자, 네이버, 카카오 등)
+        # company_list_type = "finance_focus" # 금융주 중심 (KB금융, 신한지주 등)
+        # company_list_type = "custom_file"   # target_companies.json 파일 사용
+        
+        print(f"📊 분석 규모: {company_list_type}")
+        
         # 파이프라인 실행
-        pipeline = DataPipeline(google_api_key=GOOGLE_API_KEY)
+        pipeline = DataPipeline(
+            google_api_key=GOOGLE_API_KEY,
+            company_list_type=company_list_type
+        )
         results = pipeline.run_pipeline()
         
         # 결과 출력
@@ -386,13 +432,27 @@ def main():
                 print(f"  - {error}")
         
         print("\n🎯 다음 단계:")
-        print("  1. rag_report_generator.ipynb 노트북 실행")  # 올바른 파일명으로 수정
+        print("  1. rag_report_generator.ipynb 노트북 실행")
         print("  2. 생성된 리포트를 파인튜닝 데이터셋으로 활용")
         print("  3. 정기적으로 이 스크립트 재실행하여 데이터 업데이트")
+        print("\n🎉 Producer-Consumer 분리 완료!")
+        print(f"  📥 Producer: 데이터 수집 완료 ({results['total_chunks']}개 벡터 청크 생성)")
+        print(f"  📤 Consumer: 이제 rag_report_generator.ipynb에서 오프라인 분석 가능")
+        
+        # 🔧 규모 조정 가이드
+        print(f"\n📈 현재 분석 규모: {company_list_type} ({len(pipeline.target_companies)}개 기업)")
+        print("\n💡 규모 조정 가이드:")
+        print("  • top_10: 빠른 테스트용 (~10분)")
+        print("  • top_30: 적당한 규모 (~30분)")
+        print("  • top_50: 대규모 분석 (~50분)")
+        print("  • top_100: 전체 코스피 (~100분)")
+        print("  • tech_focus: 기술주 중심")
+        print("  • finance_focus: 금융주 중심")
         
     except Exception as e:
         logger.error(f"❌ 파이프라인 실행 실패: {e}")
         print(f"❌ 오류 발생: {e}")
+
 
 if __name__ == "__main__":
     main()
