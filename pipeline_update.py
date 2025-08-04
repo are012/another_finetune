@@ -91,22 +91,27 @@ class DataPipeline:
         }
         
         try:
-            # 1. 최신 뉴스 수집
+            # 1. 최신 뉴스 수집 (에러 처리 강화)
             logger.info(f"  📰 뉴스 데이터 수집 중...")
-            news_articles = dc.fetch_naver_news(company_name, display_count=10)
-            
-            for article in news_articles:
-                # 뉴스 데이터에 메타데이터 추가
-                if company_name in article['title'] or company_name in article['description']:
-                    collected_data["news_data"].append({
-                        "title": article['title'],
-                        "description": article['description'],
-                        "source": "naver_news",
-                        "company": company_name,
-                        "collection_date": datetime.now().isoformat()
-                    })
-            
-            logger.info(f"  ✅ 뉴스 {len(collected_data['news_data'])}건 수집 완료")
+            try:
+                news_articles = dc.fetch_naver_news(company_name, display_count=10)
+                
+                for article in news_articles:
+                    # 뉴스 데이터에 메타데이터 추가
+                    if company_name in article['title'] or company_name in article['description']:
+                        collected_data["news_data"].append({
+                            "title": article['title'],
+                            "description": article['description'],
+                            "source": "naver_news",
+                            "company": company_name,
+                            "collection_date": datetime.now().isoformat()
+                        })
+                
+                logger.info(f"  ✅ 뉴스 {len(collected_data['news_data'])}건 수집 완료")
+                
+            except Exception as news_error:
+                logger.warning(f"  ⚠️ 뉴스 데이터 수집 실패: {news_error}")
+                # 뉴스 수집 실패해도 계속 진행
             
             # 2. DART 공시 정보 수집 (중요도별 분류)
             logger.info(f"  🏢 공시 데이터 수집 중...")
@@ -266,6 +271,19 @@ class DataPipeline:
         # data_collector 모듈 최신 버전으로 리로드
         importlib.reload(dc)
         
+        # CSV 파일 존재 확인 및 생성 (DART API 사용을 위해)
+        csv_path = 'corp_codes.csv'
+        if not os.path.exists(csv_path):
+            logger.info("📋 corp_codes.csv 파일이 없습니다. CORPCODE.xml에서 생성합니다...")
+            try:
+                df = dc.load_corp_codes_optimized()
+                if df is not None:
+                    logger.info("✅ corp_codes.csv 파일 생성 완료")
+                else:
+                    logger.warning("⚠️ CORPCODE.xml 파일을 찾을 수 없습니다. 공시 데이터 수집이 제한될 수 있습니다.")
+            except Exception as e:
+                logger.warning(f"⚠️ corp_codes.csv 생성 실패: {e}")
+        
         # 각 기업별 데이터 수집 및 저장
         for company in self.target_companies:
             try:
@@ -368,7 +386,7 @@ def main():
                 print(f"  - {error}")
         
         print("\n🎯 다음 단계:")
-        print("  1. report_generator.ipynb 노트북 실행")
+        print("  1. rag_report_generator.ipynb 노트북 실행")  # 올바른 파일명으로 수정
         print("  2. 생성된 리포트를 파인튜닝 데이터셋으로 활용")
         print("  3. 정기적으로 이 스크립트 재실행하여 데이터 업데이트")
         
